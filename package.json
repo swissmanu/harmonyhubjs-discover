@@ -1,11 +1,17 @@
 {
   "name": "harmonyhubjs-discover",
   "version": "1.0.0",
-  "description": "Discover available Harmony Hubs in the current network.",
+  "description": "Discover available Logitech Harmony Hubs in the current network.",
+  "keywords": [
+    "logitech",
+    "harmony",
+    "hub",
+    "remote",
+    "api",
+    "discover",
+    "search"
+  ],
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/swissmanu/harmonyhubjs-discover"
@@ -17,7 +23,6 @@
   },
   "homepage": "https://github.com/swissmanu/harmonyhubjs-discover",
   "dependencies": {
-    "debug": "^2.1.0",
-    "mdns": "^2.2.2"
+    "debug": "^2.1.0"
   }
 }
