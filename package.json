@@ -1,0 +1,23 @@
+{
+  "name": "harmonyhubjs-discover",
+  "version": "1.0.0",
+  "description": "Discover available Harmony Hubs in the current network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swissmanu/harmonyhubjs-discover"
+  },
+  "author": "Manuel Alabor <msites@msites.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swissmanu/harmonyhubjs-discover/issues"
+  },
+  "homepage": "https://github.com/swissmanu/harmonyhubjs-discover",
+  "dependencies": {
+    "debug": "^2.1.0",
+    "mdns": "^2.2.2"
+  }
+}
