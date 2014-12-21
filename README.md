@@ -12,8 +12,38 @@ npm install harmonyhubjs-discover --save
 
 ## Usage
 ```javascript
+var HarmonyHubDiscover = require('harmonyhub-discover')
+	, discover = new HarmonyHubDiscover(61991);
 
+discover.on('online', function(hub) {
+	// Triggered when a new hub was found
+	console.log('discovered ' + hub.ip);
+});
+
+discover.on('offline', function(hub) {
+	// Triggered when a hub disappeared
+	console.log('lost ' + hub.ip);
+});
+
+discover.on('update', function(hubs) {
+	// Combines the online & update events by returning an array with all known
+	// hubs for ease of use.
+	var knownHubIps = hubs.reduce(function(prev, hub) {
+			return prev + (prev.length > 0 ? ', ' : '') + hub.ip;
+		}, '');
+
+	console.log('known ips: ' + knownHubIps);
+});
+
+// Look for hubs:
+discover.start();
+
+// Stop looking for hubs:
+// discover.stop();
 ```
+
+## Control your hub
+After looking up your Harmony hub, use [harmonyhubjs-client](https://github.com/swissmanu/harmonyhubjs-client) to control it.
 
 
 ## Debug Traces
