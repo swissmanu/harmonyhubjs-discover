@@ -12,7 +12,7 @@ npm install harmonyhubjs-discover --save
 
 ## Usage
 ```javascript
-var HarmonyHubDiscover = require('harmonyhub-discover')
+var HarmonyHubDiscover = require('harmonyhubjs-discover')
 	, discover = new HarmonyHubDiscover(61991);
 
 discover.on('online', function(hub) {
