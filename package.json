@@ -1,6 +1,6 @@
 {
   "name": "harmonyhubjs-discover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discover available Logitech Harmony Hubs in the current network.",
   "keywords": [
     "logitech",
