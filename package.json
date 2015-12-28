@@ -1,6 +1,5 @@
 {
   "name": "harmonyhubjs-discover",
-  "version": "1.0.2",
   "description": "Discover available Logitech Harmony Hubs in the current network.",
   "keywords": [
     "logitech",
@@ -22,7 +21,8 @@
     "url": "https://github.com/swissmanu/harmonyhubjs-discover/issues"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "homepage": "https://github.com/swissmanu/harmonyhubjs-discover",
   "dependencies": {
@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.5",
-    "standard": "^5.4.1"
+    "standard": "^5.4.1",
+    "semantic-release": "^4.3.5"
   },
   "config": {
     "commitizen": {
