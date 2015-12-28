@@ -1,6 +1,5 @@
 # harmonyhubjs-discover
-
-[![npm version](https://badge.fury.io/js/harmonyhubjs-discover.svg)](http://badge.fury.io/js/harmonyhubjs-discover)
+[![Build Status](https://travis-ci.org/swissmanu/harmonyhubjs-discover.svg)](https://travis-ci.org/swissmanu/harmonyhubjs-discover) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![npm version](https://badge.fury.io/js/harmonyhubjs-discover.svg)](http://badge.fury.io/js/harmonyhubjs-discover) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 `harmonyhubjs-discover` is a Node.JS library which lookups available Logitech Harmony hubs in the local network.
 
@@ -12,34 +11,34 @@ npm install harmonyhubjs-discover --save
 
 ## Usage
 ```javascript
-var HarmonyHubDiscover = require('harmonyhubjs-discover')
-	, discover = new HarmonyHubDiscover(61991);
+var HarmonyHubDiscover = require('harmonyhub-discover')
+var discover = new HarmonyHubDiscover(61991)
 
 discover.on('online', function(hub) {
 	// Triggered when a new hub was found
-	console.log('discovered ' + hub.ip);
-});
+	console.log('discovered ' + hub.ip)
+})
 
 discover.on('offline', function(hub) {
 	// Triggered when a hub disappeared
-	console.log('lost ' + hub.ip);
-});
+	console.log('lost ' + hub.ip)
+})
 
 discover.on('update', function(hubs) {
 	// Combines the online & update events by returning an array with all known
 	// hubs for ease of use.
 	var knownHubIps = hubs.reduce(function(prev, hub) {
-			return prev + (prev.length > 0 ? ', ' : '') + hub.ip;
-		}, '');
+			return prev + (prev.length > 0 ? ', ' : '') + hub.ip
+		}, '')
 
-	console.log('known ips: ' + knownHubIps);
-});
+	console.log('known ips: ' + knownHubIps)
+})
 
 // Look for hubs:
-discover.start();
+discover.start()
 
 // Stop looking for hubs:
-// discover.stop();
+// discover.stop()
 ```
 
 ## Control your hub

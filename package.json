@@ -14,15 +14,27 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swissmanu/harmonyhubjs-discover"
+    "url": "https://github.com/swissmanu/harmonyhubjs-discover.git"
   },
-  "author": "Manuel Alabor <msites@msites.net>",
+  "author": "Manuel Alabor <manuel@alabor.me>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/swissmanu/harmonyhubjs-discover/issues"
   },
+  "scripts": {
+    "test": "standard"
+  },
   "homepage": "https://github.com/swissmanu/harmonyhubjs-discover",
   "dependencies": {
     "debug": "^2.1.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.1.5",
+    "standard": "^5.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
