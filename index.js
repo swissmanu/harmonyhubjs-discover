@@ -1,1 +1,1 @@
-module.exports = require('./lib/explorer');
+module.exports = require('./lib/explorer')
