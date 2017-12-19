@@ -5,11 +5,13 @@
 
 
 ## Installation
+
 ```bash
 npm install harmonyhubjs-discover --save
 ```
 
 ## Usage
+
 ```javascript
 var HarmonyHubDiscover = require('harmonyhub-discover')
 var discover = new HarmonyHubDiscover(61991)
@@ -42,14 +44,24 @@ discover.start()
 ```
 
 ## Control your hub
+
 After looking up your Harmony hub, use [harmonyhubjs-client](https://github.com/swissmanu/harmonyhubjs-client) to control it.
 
 
 ## Debug Traces
+
 `harmonyhubjs-discover` uses [debug](https://github.com/visionmedia/debug) for generating traces throughout its execution time. Activate them by setting the `DEBUG` environment variable:
 
 	$ DEBUG=harmonyhubjs:discover:* node myharmonyjsapp.js
 
+## Contribution
+
+The `master` branch contains the latest stable release of the application.
+Development efforts are integrated with the `develop` branch first. Changes get then merged into `master` as soon as a new release should be published.
+
+When opening a new Pull Request make sure you point them to `develop`. Further ensure that your code follows [standard-js](http://standardjs.com/) style guidelines and you make use of proper commit messages. `harmonyhubjs-discover` loves [Commitizen](http://commitizen.github.io/cz-cli/), so take a look there and use `git cz` for the most simple workflow :-)
+
+Thank you for your contribution!
 
 ## License
 
