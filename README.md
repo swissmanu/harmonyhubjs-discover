@@ -43,6 +43,18 @@ discover.start()
 // discover.stop()
 ```
 
+## Options to HarmonyHubDiscover
+
+HarmonyHubDiscover takes an optional `options` argument that allows you to specify parameters to the discovery packet that is sent out:
+* `address`: the broadcast address to send the discovery packet to, defaults to `255.255.255.255`. On systems with multiple interfaces, you need to specify the broadcast address of the network your Hub is connected to. For example, if the Hub is connected to 192.168.1.0/24, specify address `192.168.1.255`.
+* `interval`: the number of milliseconds between sending out discovery packets. Defaults to `1000`.
+* `port`: The port to send the discovery packet to. Defaults to `5224`.
+
+Example:
+```javascript
+var discover = new HarmonyHubDiscover(61991, { 'address': '192.168.1.255' })
+```
+
 ## Control your hub
 
 After looking up your Harmony hub, use [harmonyhubjs-client](https://github.com/swissmanu/harmonyhubjs-client) to control it.
