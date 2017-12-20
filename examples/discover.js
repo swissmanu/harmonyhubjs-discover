@@ -1,4 +1,4 @@
-var discover = new (require('../'))(61991)
+const discover = new (require('../'))(61991)
 
 discover.on('online', function (hub) {
   console.log('discovered ' + hub.ip)
@@ -9,7 +9,7 @@ discover.on('offline', function (hub) {
 })
 
 discover.on('update', function (hubs) {
-  var knownHubIps = hubs.reduce(function (prev, hub) {
+  const knownHubIps = hubs.reduce(function (prev, hub) {
     return prev + (prev.length > 0 ? ', ' : '') + hub.ip
   }, '')
 

@@ -10,11 +10,11 @@
 npm install harmonyhubjs-discover --save
 ```
 
-## Usage
+## Usage
 
 ```javascript
-var HarmonyHubDiscover = require('harmonyhub-discover')
-var discover = new HarmonyHubDiscover(61991)
+const HarmonyHubDiscover = require('harmonyhub-discover')
+const discover = new HarmonyHubDiscover(61991)
 
 discover.on('online', function(hub) {
 	// Triggered when a new hub was found
@@ -29,9 +29,9 @@ discover.on('offline', function(hub) {
 discover.on('update', function(hubs) {
 	// Combines the online & update events by returning an array with all known
 	// hubs for ease of use.
-	var knownHubIps = hubs.reduce(function(prev, hub) {
-			return prev + (prev.length > 0 ? ', ' : '') + hub.ip
-		}, '')
+	const knownHubIps = hubs.reduce(function(prev, hub) {
+		return prev + (prev.length > 0 ? ', ' : '') + hub.ip
+	}, '')
 
 	console.log('known ips: ' + knownHubIps)
 })
@@ -39,9 +39,13 @@ discover.on('update', function(hubs) {
 // Look for hubs:
 discover.start()
 
-// Stop looking for hubs:
+// Stop looking for hubs again:
 // discover.stop()
 ```
+
+### Further Examples
+
+There are further examples available within the [examples/](examples/) directory.
 
 ## Control your hub
 
@@ -52,7 +56,9 @@ After looking up your Harmony hub, use [harmonyhubjs-client](https://github.com/
 
 `harmonyhubjs-discover` uses [debug](https://github.com/visionmedia/debug) for generating traces throughout its execution time. Activate them by setting the `DEBUG` environment variable:
 
-	$ DEBUG=harmonyhubjs:discover:* node myharmonyjsapp.js
+```bash
+DEBUG=harmonyhubjs:discover:* node myharmonyjsapp.js
+```
 
 ## Contribution
 
@@ -63,7 +69,7 @@ When opening a new Pull Request make sure you point them to `develop`. Further e
 
 Thank you for your contribution!
 
-## License
+## License
 
 Copyright (c) 2014 Manuel Alabor
 
