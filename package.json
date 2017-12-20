@@ -31,11 +31,12 @@
   "devDependencies": {
     "cz-conventional-changelog": "^1.1.5",
     "standard": "^5.4.1",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^8.2.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "version": "0.0.0-development"
 }
